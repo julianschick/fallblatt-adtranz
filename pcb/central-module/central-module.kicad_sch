@@ -5085,6 +5085,28 @@
 		)
 		(uuid "699b727f-fcf1-4284-8616-e669e0aae39d")
 	)
+	(label "24VAC_P_UF"
+		(at 73.66 29.21 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8a0f6e72-3bf8-4b46-b4f3-ffce8cf9c4a8")
+	)
+	(label "T_BRIDGE"
+		(at 71.12 31.75 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a7e1bab2-faaf-4944-bfd4-fbf803832c89")
+	)
 	(label "P_FUSED"
 		(at 62.23 69.85 0)
 		(fields_autoplaced yes)
@@ -5095,6 +5117,17 @@
 			(justify left bottom)
 		)
 		(uuid "ddff902e-6f7c-46f0-b2eb-8fd3c1ce22d2")
+	)
+	(label "+24V_UF"
+		(at 71.12 46.99 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e95a188a-6862-48fa-9aca-e5ce25e2d320")
 	)
 	(global_label "SPIN_ENABLE_3"
 		(shape input)

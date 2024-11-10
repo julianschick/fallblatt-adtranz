@@ -518,6 +518,14 @@
       {
         "netclass": "230Power",
         "pattern": "/P_FUSED"
+      },
+      {
+        "netclass": "24Power",
+        "pattern": "/+24V_UF"
+      },
+      {
+        "netclass": "24Power",
+        "pattern": "/T_BRIDGE"
       }
     ]
   },
