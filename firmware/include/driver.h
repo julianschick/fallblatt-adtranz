@@ -23,6 +23,9 @@ public:
     ~Driver();
 
     void set_position(int module_index, uint8_t pos);
+    void demo();
+    void en();
+    void dis();
 
 private:
     int device_count;

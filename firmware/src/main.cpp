@@ -1,4 +1,5 @@
 #include <esp_log.h>
+#include <rom/ets_sys.h>
 
 #include "driver.h"
 
@@ -14,11 +15,35 @@ extern "C" void app_main() {
 
     Driver* drv = new Driver(&pins, 1);
     
-    while (true) {
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-        drv->set_position(0, 3);
-        ESP_LOGI("MAIN", "Pushing out.");
+    
+    // 1101111 = 6
+    // 1110111 = 'E'
+    // 1111011 = 'U'
+    // 1001111 = 3
+    // 0001111 = 4
+    // 0000111 = 9
+
+    drv->set_position(0, 0b01111011);
+    ESP_LOGI("MAIN", "Pushing out 'current'");
+    vTaskDelay(10 / portTICK_PERIOD_MS);
+    drv->en();
+
+    
+
+    while(true) { 
+        vTaskDelay(1);
     }
+      //  vTaskDelay(1000 / portTICK_PERIOD_MS);
+                
+        // for (int i = 0; i < 80; i++) {
+        //     drv->en();
+        //     ets_delay_us(10000);
+        //     drv->dis();
+        //     vTaskDelay(1000 / portTICK_PERIOD_MS);
+        // }
 
-
+        
+        // drv->set_position(0, 5);
+        // ESP_LOGI("MAIN", "Pushing out '5'");
+        // vTaskDelay(50000 / portTICK_PERIOD_MS);
 }

@@ -1,6 +1,7 @@
 #include "driver.h"
 
 #include <rom/ets_sys.h>
+#include <esp_log.h>
 
 Driver::Driver(driver_pins_t* pins_, int device_count_) : 
     device_count(device_count_) 
@@ -17,17 +18,48 @@ Driver::~Driver() {
 }
 
 void Driver::set_position(int module_index, uint8_t pos) {
-    if (module_index >= 0 && module_index < device_count && positions[module_index] != pos) {
+    if (module_index >= 0 && module_index < device_count /*&& positions[module_index] != pos*/) {
         positions[module_index] = pos;
         
         push_out();
         
-        gpio_set_level(pins.spinEnable, 1);
+        //gpio_set_level(pins.spinEnable, 1);
     }
 }
 
+void Driver::demo() {
+    gpio_set_level(pins.rclk, 0);
+    gpio_set_level(pins.clr, 0);
+    gpio_set_level(pins.oe, 0);
+
+    while(true) {
+        ESP_LOGI("demo", "RCLK HI");
+        gpio_set_level(pins.rclk, 1);
+        vTaskDelay(3000 / portTICK_PERIOD_MS);
+        gpio_set_level(pins.rclk, 0);
+
+        ESP_LOGI("demo", "CLR HI");
+        gpio_set_level(pins.clr, 1);
+        vTaskDelay(3000 / portTICK_PERIOD_MS);
+        gpio_set_level(pins.clr, 0);
+
+        ESP_LOGI("demo", "OE HI");
+        gpio_set_level(pins.oe, 1);
+        vTaskDelay(3000 / portTICK_PERIOD_MS);
+        gpio_set_level(pins.oe, 0);
+    }
+}
+
+void Driver::en() {
+    gpio_set_level(pins.spinEnable, 1);
+}
+
+void Driver::dis() {
+    gpio_set_level(pins.spinEnable, 0);
+}
+
 void Driver::init_spi() {
-     esp_err_t ret;
+    esp_err_t ret;
 
     spi_bus_config_t bus_config;
     bus_config.miso_io_num = -1;
