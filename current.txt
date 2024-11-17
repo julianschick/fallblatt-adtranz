@@ -1,0 +1,11 @@
+No Operation
+
+24VDC: 32mA
+24VAC: 0mA
+5VDC: ?
+
+Cycling
+
+24VDC: 50mA 
+24VAC: 200mA
+5VDC: ?
