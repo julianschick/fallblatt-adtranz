@@ -7,9 +7,37 @@
 #include <string>
 #include <stdexcept>
 
+void main1();
+void main2();
+
 
 extern "C" void app_main() {
+    main2();
+}
 
+void main2() {
+    driver_pins_t pins;
+    pins.ser = GPIO_NUM_13;
+    pins.serclk = GPIO_NUM_14;
+    pins.oe = GPIO_NUM_15;
+    pins.clr = GPIO_NUM_19;
+    pins.rclk = GPIO_NUM_18;
+    pins.spinEnable = GPIO_NUM_4;
+
+    Driver* drv = new Driver(&pins, 1);
+
+    drv->set_position(0, 0x66);
+
+    while(true) {
+        drv->en();
+        vTaskDelay(5000 / portTICK_PERIOD_MS);
+        drv->dis();
+        vTaskDelay(5000 / portTICK_PERIOD_MS);
+    }
+
+}
+
+void main1() {
     driver_pins_t pins;
     pins.ser = GPIO_NUM_13;
     pins.serclk = GPIO_NUM_14;
@@ -137,7 +165,7 @@ extern "C" void app_main() {
                     ESP_LOG_BUFFER_HEX("main", &value, 1);
                     drv->set_position(0, value);
 
-                } catch (std::exception* e) {
+                } catch (void* any) {
                     ESP_LOGE("main", "invalid command");
                 }
             }
