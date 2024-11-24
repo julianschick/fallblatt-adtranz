@@ -12,7 +12,7 @@ void main2();
 
 
 extern "C" void app_main() {
-    main2();
+    main1();
 }
 
 void main2() {
