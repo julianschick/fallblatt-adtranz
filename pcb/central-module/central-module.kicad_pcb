@@ -3891,7 +3891,7 @@
 				)
 			)
 		)
-		(property "Value" "0,5A 300V"
+		(property "Value" "1A 300V"
 			(at 2.95 -3.9 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -4404,7 +4404,7 @@
 				)
 			)
 		)
-		(property "Value" "2A 50V"
+		(property "Value" "5A 50V"
 			(at 19.55 4 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -8534,7 +8534,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R3"
-			(at 12.88 0 360)
+			(at 12.88 0 0)
 			(layer "F.SilkS")
 			(uuid "54b58fa5-1f24-4e7c-8dd2-ebb32eb49696")
 			(effects
@@ -8545,7 +8545,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 5.08 2.37 360)
+			(at 5.08 2.37 0)
 			(layer "F.Fab")
 			(uuid "e6327ca1-aced-40a0-a3bc-0e921d759a3a")
 			(effects
@@ -8760,7 +8760,7 @@
 			(uuid "6919139f-e4d9-436e-8116-228dc1d3ef1e")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5.08 0 360)
+			(at 5.08 0 0)
 			(layer "F.Fab")
 			(uuid "3f769791-c87e-4172-bf7d-ea31a23037bf")
 			(effects
