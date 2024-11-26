@@ -4826,6 +4826,12 @@
 		(uuid "7349d482-e034-40a5-b075-22d199399975")
 	)
 	(junction
+		(at 259.08 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7ba7c399-9646-434d-b6cd-a1403ce0c9ff")
+	)
+	(junction
 		(at 193.04 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5973,6 +5979,16 @@
 	)
 	(wire
 		(pts
+			(xy 259.08 132.08) (xy 259.08 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ef0b43f-bcb3-454f-9f93-d03cdc806fa7")
+	)
+	(wire
+		(pts
 			(xy 153.67 53.34) (xy 97.79 53.34)
 		)
 		(stroke
@@ -6180,6 +6196,16 @@
 			(type default)
 		)
 		(uuid "8ead5bcd-e0a2-409b-92e2-749cf5f6d319")
+	)
+	(wire
+		(pts
+			(xy 259.08 113.03) (xy 259.08 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "908d76f8-5988-4000-aab3-f80aaf8527e1")
 	)
 	(wire
 		(pts
@@ -6943,6 +6969,16 @@
 	)
 	(wire
 		(pts
+			(xy 259.08 105.41) (xy 269.24 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dca4d072-2693-4ef8-9342-9efd091538e2")
+	)
+	(wire
+		(pts
 			(xy 153.67 34.29) (xy 153.67 53.34)
 		)
 		(stroke
@@ -7060,6 +7096,16 @@
 			(type default)
 		)
 		(uuid "e727febe-6456-47af-89f8-de7ca38f3fc7")
+	)
+	(wire
+		(pts
+			(xy 259.08 113.03) (xy 269.24 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7e426b5-a3a5-4244-9a4a-7ef298a08c2c")
 	)
 	(wire
 		(pts
@@ -7935,6 +7981,71 @@
 			(project ""
 				(path "/7d33117e-4f7b-4167-8883-44198fec4073"
 					(reference "RN1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 274.32 113.03 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "20f77ef2-1344-4c8e-997a-dac3c0f2e099")
+		(property "Reference" "J10"
+			(at 273.685 108.8093 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x01_Pin"
+			(at 273.685 111.2336 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "JS_Local:Langloch-Pad"
+			(at 274.32 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 274.32 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 274.32 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4c848c10-441b-47e9-a874-b415ea9284ab")
+		)
+		(instances
+			(project "plug-module"
+				(path "/7d33117e-4f7b-4167-8883-44198fec4073"
+					(reference "J10")
 					(unit 1)
 				)
 			)
@@ -10002,6 +10113,71 @@
 			(project ""
 				(path "/7d33117e-4f7b-4167-8883-44198fec4073"
 					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 274.32 105.41 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f064a32f-ef83-446f-8599-ffe78160efa4")
+		(property "Reference" "J9"
+			(at 273.685 101.1893 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x01_Pin"
+			(at 273.685 103.6136 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "JS_Local:Langloch-Pad"
+			(at 274.32 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 274.32 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 274.32 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "26f069fe-d87a-4c9d-a8f4-23c59b8787f4")
+		)
+		(instances
+			(project "plug-module"
+				(path "/7d33117e-4f7b-4167-8883-44198fec4073"
+					(reference "J9")
 					(unit 1)
 				)
 			)

@@ -7060,7 +7060,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 61.722 185.42 90)
 			(effects
 				(font
@@ -7496,7 +7496,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 99.822 181.61 90)
 			(effects
 				(font
@@ -7901,7 +7901,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Varistor:RV_Disc_D9mm_W3.3mm_P5mm"
+		(property "Footprint" "Varistor:RV_Disc_D15.5mm_W3.9mm_P7.5mm"
 			(at 72.898 76.2 90)
 			(effects
 				(font
