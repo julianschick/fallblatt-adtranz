@@ -4320,6 +4320,12 @@
 		(uuid "23981190-708b-4e0f-bae1-f8928fbd3887")
 	)
 	(junction
+		(at 259.08 139.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "242f2c25-b14b-4f9c-aa72-05e10af7e798")
+	)
+	(junction
 		(at 161.29 172.72)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4522,6 +4528,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "98cf41d1-a908-4515-a112-11b9150f6664")
+	)
+	(junction
+		(at 259.08 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9ae02ebf-c08e-4db0-84ab-974aac803b1c")
 	)
 	(junction
 		(at 69.85 167.64)
@@ -5026,6 +5038,16 @@
 			(type default)
 		)
 		(uuid "25afa14a-8215-438e-ad15-8608083ecd0a")
+	)
+	(wire
+		(pts
+			(xy 259.08 147.32) (xy 259.08 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28e8eae5-4541-4b11-8865-a35d6d8da2cd")
 	)
 	(wire
 		(pts
@@ -6409,6 +6431,16 @@
 	)
 	(wire
 		(pts
+			(xy 259.08 153.67) (xy 269.24 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb07af5d-9353-4543-98fa-142d330274c4")
+	)
+	(wire
+		(pts
 			(xy 87.63 107.95) (xy 110.49 107.95)
 		)
 		(stroke
@@ -6476,6 +6508,16 @@
 			(type default)
 		)
 		(uuid "bf1a0bd0-2f85-4857-a978-1a07f0941310")
+	)
+	(wire
+		(pts
+			(xy 259.08 139.7) (xy 259.08 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c04b1cff-d07d-4076-b759-5d5b574315cc")
 	)
 	(wire
 		(pts
@@ -6676,6 +6718,16 @@
 			(type default)
 		)
 		(uuid "d2a011d3-d328-4595-8f73-b357737df808")
+	)
+	(wire
+		(pts
+			(xy 259.08 147.32) (xy 269.24 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d340f8e6-489f-480a-bfc8-2bea7c04e40c")
 	)
 	(wire
 		(pts
@@ -8088,6 +8140,71 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 274.32 153.67 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3332f367-5d29-4949-843d-5a1c243ba3a3")
+		(property "Reference" "J12"
+			(at 273.685 149.4493 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x01_Pin"
+			(at 273.685 151.8736 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_4.0x4.0mm"
+			(at 274.32 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 274.32 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 274.32 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c4375f27-ba74-463c-bc6e-549bf2c42fce")
+		)
+		(instances
+			(project "plug-module"
+				(path "/7d33117e-4f7b-4167-8883-44198fec4073"
+					(reference "J12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 80.01 163.83 0)
 		(unit 1)
@@ -8620,7 +8737,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
+		(property "Footprint" "Capacitor_THT:C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3"
 			(at 243.84 19.3548 0)
 			(effects
 				(font
@@ -9739,7 +9856,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b21f027c-2a7b-414e-bf20-59a6cfe0c3c0")
 		(property "Reference" "D1"
 			(at 229.362 52.1278 90)
@@ -9750,13 +9866,13 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1N4148"
-			(at 229.362 54.5521 90)
+		(property "Value" "1N4148/1N4003"
+			(at 224.536 61.468 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Diode_THT:D_T-1_P10.16mm_Horizontal"
@@ -10133,6 +10249,71 @@
 			(project ""
 				(path "/7d33117e-4f7b-4167-8883-44198fec4073"
 					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 274.32 147.32 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d797e7dc-fb63-4d2b-852d-45273887b174")
+		(property "Reference" "J11"
+			(at 273.685 143.0993 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x01_Pin"
+			(at 273.685 145.5236 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_4.0x4.0mm"
+			(at 274.32 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 274.32 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 274.32 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "78f2b787-bc60-42df-8ad0-92beb8e76f24")
+		)
+		(instances
+			(project "plug-module"
+				(path "/7d33117e-4f7b-4167-8883-44198fec4073"
+					(reference "J11")
 					(unit 1)
 				)
 			)
