@@ -3085,7 +3085,7 @@
 		(descr "C, Rect series, Radial, pin pitch=15.00mm, , length*width=18*7mm^2, Capacitor, http://www.wima.com/EN/WIMA_FKS_3.pdf")
 		(tags "C Rect series Radial pin pitch 15.00mm  length 18mm width 7mm Capacitor")
 		(property "Reference" "C4"
-			(at -3.2 0 360)
+			(at -3.2 0 0)
 			(layer "F.SilkS")
 			(uuid "a04b5bcd-08cc-46f6-bac5-9814e587fe31")
 			(effects
@@ -3096,7 +3096,7 @@
 			)
 		)
 		(property "Value" "2u2"
-			(at 7.5 4.75 360)
+			(at 7.5 4.75 0)
 			(layer "F.Fab")
 			(uuid "a2db5f65-0b0b-45f6-ae77-589fa0ab2c50")
 			(effects
@@ -3271,7 +3271,7 @@
 			(uuid "f9e23f4e-6ffe-4c9c-95f3-bdab64198244")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 7.5 0 360)
+			(at 7.5 0 0)
 			(layer "F.Fab")
 			(uuid "09987ecf-829b-4cbc-b910-9ae2118cbaa4")
 			(effects
@@ -5043,7 +5043,7 @@
 		(descr "C, Disc series, Radial, pin pitch=5.00mm, , diameter*width=4.3*1.9mm^2, Capacitor, http://www.vishay.com/docs/45233/krseries.pdf")
 		(tags "C Disc series Radial pin pitch 5.00mm  diameter 4.3mm width 1.9mm Capacitor")
 		(property "Reference" "C3"
-			(at 2.5 2 90)
+			(at 2.5 -2.5 180)
 			(layer "F.SilkS")
 			(uuid "d3e6652d-bdd3-46a6-8333-9a56a7195a01")
 			(effects
@@ -10913,7 +10913,7 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
@@ -10938,6 +10938,18 @@
 			(font
 				(size 1 1)
 				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 171.1 22.6 0)
+		(layer "F.SilkS")
+		(uuid "9da79759-ae3a-4b84-88fd-ef2aa0e903cd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
@@ -10976,6 +10988,18 @@
 			(font
 				(size 1 1)
 				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 155.8 22.6 0)
+		(layer "F.SilkS")
+		(uuid "f7f8f41c-9a69-4a41-89f5-d215a60152c9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)

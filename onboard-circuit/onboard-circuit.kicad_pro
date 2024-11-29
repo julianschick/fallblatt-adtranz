@@ -270,8 +270,11 @@
       "GND": "c",
       "Net-(C-Pad1)": "e",
       "Net-(C1-Pad1)": "e",
+      "Net-(GRAYCODE-LIGHT-A)": "d",
       "Net-(J1-Pin_1)": "g",
+      "Net-(J2-Pin_15)": "g",
       "Net-(K1-Pad14)": "b",
+      "Net-(M--)": "g",
       "Net-(M1-Pad1)": "b",
       "unconnected-(C1-Pad1)": "e",
       "unconnected-(J1-Pin_1-Pad1)": "a"
