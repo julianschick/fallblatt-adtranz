@@ -32,13 +32,14 @@ namespace esphome::fallblatt {
 
         std::string latinValue = GrayConverter::utf8ToLatin(value);
 
-        ESP_LOGI("ABC", "%d", latinValue.size());
+        ESP_LOGI("ABC", "strlen = %d", latinValue.size());
         for (int i = 0; i < latinValue.size(); i++) {
-            ESP_LOGI("ABC", "%d", latinValue[i]);
+            ESP_LOGI("ABC", "str[%d] = %d", i, latinValue[i]);
         }
 
         if (latinValue.size() > 0) {
             int pos = GrayConverter::charToPosition(latinValue[0]);
+            ESP_LOGI("ABC", "pos1 = %d", pos);
             drv->set_position(0, pos);
         }
         

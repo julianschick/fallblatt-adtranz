@@ -9,7 +9,7 @@ GrayConverter::GrayConverter() {
         0x61, 0x21, 0x01, 0x41, 0x51, 0x11, 0x31, 0x71, 0x75, 0x35,
         0x15, 0x55, 0x45, 0x05, 0x25, 0x65, 0x6D, 0x2D, 0x0D, 0x4D,
         0x5D, 0x1D, 0x3D, 0x7D, 0x7C, 0x3C, 0x1C, 0x5C, 0x4C, 0x0C,
-        0x2C, 0x6C, 0x64, 0x24, 0x04, 0x44, 0x54, 0x14, 0x34, 0x4,
+        0x2C, 0x6C, 0x64, 0x24, 0x04, 0x44, 0x54, 0x14, 0x34, 0x74,
         0x70, 0x30, 0x10, 0x50
     };
 }
@@ -18,11 +18,24 @@ GrayConverter::~GrayConverter() {
     delete[] tbl;
 }
 
-uint8_t GrayConverter::positionToGray(int pos) {
-    if (pos < 0 || pos >= 83) {
+uint8_t GrayConverter::positionToGray2(int pos) {
+    if (pos < 0 || pos > 83) {
         return tbl[0];
     } else {
         return tbl[pos];
+    }
+}
+
+uint8_t GrayConverter::positionToGray(int pos) {
+    if (pos < 0 || pos > 83) {
+        return 0x7F;
+    } else {
+        uint8_t pos8 = pos;
+        pos8 = ~(pos8 ^ (pos8 >> 1));
+
+        // reverse bit order
+        pos8 = (((pos8 >> 7) & 1) | ((pos8 >> 5) & 2) | ((pos8 >> 3) & 4) | ((pos8 >> 1) & 8) | ((pos8 << 1) & 0x10) | ((pos8 << 3) & 0x20) | ((pos8 << 5) & 0x40) | ((pos8 << 7) & 0x80)) >> 1;
+        return pos8;
     }
 }
 

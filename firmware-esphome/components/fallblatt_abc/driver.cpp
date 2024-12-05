@@ -136,6 +136,8 @@ void Driver::push_out() {
         graycodes[i] = conv->positionToGray(positions[i]);
     }
 
+    ESP_LOGI("ABC", "graycodes[0] = %d", graycodes[0]);
+
     spi_transaction_t tx;
     tx.flags = 0;
     tx.cmd = 0;
