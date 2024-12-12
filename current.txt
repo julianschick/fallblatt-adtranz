@@ -1,0 +1,14 @@
+No Operation | *20
+
+24VDC: 32mA 	| 640 mA
+24VAC: 0mA	| 0 mA
+5VDC: 30mA	| 600 mA
+220VAC: 3mA	| 60 mA
+
+Cycling
+
+24VDC: 50mA 	| 1 A
+24VAC: 200mA	| 4 A
+5VDC: 30mA	| 0,6 A
+220 VAC: 28mA	| 560 mA
+
