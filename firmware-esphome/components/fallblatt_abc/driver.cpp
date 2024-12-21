@@ -4,6 +4,7 @@
 #include <esp_log.h>
 
 #define ESP_IDF 4
+#define LOG_TAG "ABC_drv"
 
 Driver::Driver(driver_pins_t* pins_, int device_count_) : 
     device_count(device_count_) 
@@ -22,20 +23,26 @@ Driver::~Driver() {
 }
 
 void Driver::set_position(int module_index, uint8_t pos) {
-    if (module_index >= 0 && module_index < device_count /*&& positions[module_index] != pos*/) {
+    if (module_index >= 0 && module_index < device_count) {
         positions[module_index] = pos;
-        
-        push_out();
-        //gpio_set_level(pins.spin_enable, 1);
     }
 }
 
-void Driver::en() {
-    gpio_set_level(pins.spin_enable, 1);
+void Driver::update() {
+    last_update = esp_timer_get_time();
+    push_out();
+    power_on();
+    spin_on();
 }
 
-void Driver::dis() {
-    gpio_set_level(pins.spin_enable, 0);
+void Driver::loop() {
+    if (spinning) {
+        int64_t now = esp_timer_get_time();
+        if (now - last_update > MAX_SPINNING_SECS * 1000000) {
+            spin_off();
+            power_off();
+        }
+    }
 }
 
 void Driver::init_spi() {
@@ -96,7 +103,7 @@ void Driver::init_gpio() {
     ESP_ERROR_CHECK(gpio_config(&io_conf));
 
     // no spinning
-    gpio_set_level(pins.spin_enable, 0);
+    spin_off();
     
     // enable register output
     gpio_set_level(pins.oe, 0);
@@ -105,14 +112,7 @@ void Driver::init_gpio() {
     gpio_set_level(pins.clr, 1);
     gpio_set_level(pins.rclk, 1);
 
-    // Zero all shift-registers
-    clear_registers();
-
-    // power on after 20uS
-    ets_delay_us(20);
-    gpio_set_level(pins.power, 1);
-
-    // so all modules are on position 0
+    // initialize all positions to 0
     for (int i = 0; i < device_count; i++) {
         positions[i] = 0;
     }
@@ -135,8 +135,6 @@ void Driver::push_out() {
     for (int i = 0; i < device_count; i++) {
         graycodes[i] = conv->positionToGray(positions[i]);
     }
-
-    ESP_LOGI("ABC", "graycodes[0] = %d", graycodes[0]);
 
     spi_transaction_t tx;
     tx.flags = 0;

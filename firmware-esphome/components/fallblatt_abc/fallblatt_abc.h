@@ -20,6 +20,9 @@ namespace esphome::fallblatt {
 
         Driver* drv;
 
+        void load_from_nvs();
+        void store_in_nvs();
+
     };
 }
 
