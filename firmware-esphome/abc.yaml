@@ -36,5 +36,5 @@ text:
     id: "fallblatt_abc_1"
     name: "Fallblatt ABC"
     mode: "text"
-
-  
+    number_of_modules: 6
+    

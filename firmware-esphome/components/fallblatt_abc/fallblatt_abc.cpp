@@ -14,7 +14,7 @@ namespace esphome::fallblatt {
         pins.spin_enable = GPIO_NUM_4;
         pins.power = GPIO_NUM_2;
 
-        drv = new Driver(&pins, 1);
+        drv = new Driver(&pins, number_of_modules);
 
         drv->set_position(0, 0);
         drv->en();
@@ -31,16 +31,19 @@ namespace esphome::fallblatt {
         state = value;
 
         std::string latinValue = GrayConverter::utf8ToLatin(value);
-
         ESP_LOGI("ABC", "strlen = %d", latinValue.size());
-        for (int i = 0; i < latinValue.size(); i++) {
-            ESP_LOGI("ABC", "str[%d] = %d", i, latinValue[i]);
-        }
 
-        if (latinValue.size() > 0) {
-            int pos = GrayConverter::charToPosition(latinValue[0]);
-            ESP_LOGI("ABC", "pos1 = %d", pos);
-            drv->set_position(0, pos);
+        int n = drv->get_device_count();
+
+        for (int i = 0; i < n; i++) {
+            if (i < latinValue.size()) {
+                ESP_LOGI("ABC", "str[%d] = %d", i, latinValue[i]);
+                int pos = GrayConverter::charToPosition(latinValue[i]);
+                ESP_LOGI("ABC", "pos[%d] = %d", i, pos);
+                drv->set_position(n - i - 1, pos);
+            } else {
+                drv->set_position(n - i - 1, GrayConverter::charToPosition(' '));
+            }
         }
         
         ESP_LOGI("ABC", "Text has been set: %s", value.c_str());
