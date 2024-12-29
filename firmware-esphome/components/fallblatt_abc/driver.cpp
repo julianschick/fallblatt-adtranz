@@ -2,6 +2,7 @@
 
 #include <rom/ets_sys.h>
 #include <esp_log.h>
+#include <esp_timer.h>
 
 #define ESP_IDF 4
 #define LOG_TAG "ABC_drv"
@@ -57,7 +58,7 @@ void Driver::init_spi() {
     bus_config.max_transfer_sz = 0;
     bus_config.flags = SPICOMMON_BUSFLAG_MASTER;
     #if ESP_IDF >= 5
-    //bus_config.isr_cpu_id = ESP_INTR_CPU_AFFINITY_AUTO;
+    bus_config.isr_cpu_id = ESP_INTR_CPU_AFFINITY_AUTO;
     #endif 
     bus_config.intr_flags = 0;
 
@@ -66,13 +67,11 @@ void Driver::init_spi() {
     device_config.address_bits = 0;
     device_config.dummy_bits = 0;
     device_config.mode = 0;
-    #if ESP_IDF >= 5
-    //device_config.clock_source = SPI_CLK_SRC_DEFAULT;
-    #endif
+    device_config.clock_source = SPI_CLK_SRC_DEFAULT;
     device_config.duty_cycle_pos = 128; // 50%/50%
     device_config.cs_ena_pretrans = 0;
     device_config.cs_ena_posttrans = 0;
-    device_config.clock_speed_hz= 10000; // 10 KHz, no need to hurry
+    device_config.clock_speed_hz= 4000; // 4 KHz, no need to hurry
     device_config.input_delay_ns = 0;
     device_config.spics_io_num = -1;
     device_config.flags = 0;
