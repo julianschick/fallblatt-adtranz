@@ -1,14 +1,20 @@
 No Operation | *20
 
-24VDC: 32mA 	| 640 mA
-24VAC: 0mA	| 0 mA
-5VDC: 30mA	| 600 mA
-220VAC: 3mA	| 60 mA
+24VDC: 32 mA 	| 640 mA
+24VAC: 0 mA	| 0 mA
+5VDC: 30 mA	| 600 mA
+220VAC: 3 mA	| 60 mA
 
-Cycling
+1 Module Non-Cycling / Cycling
 
-24VDC: 50mA 	| 1 A
-24VAC: 200mA	| 4 A
-5VDC: 30mA	| 0,6 A
-220 VAC: 28mA	| 560 mA
+24VDC: 32 mA / 50 mA 		| 0,64 A /  1 A
+24VAC: 0 mA / 200 mA		| 0 A / 4 A
+5VDC: 30 mA / 30 mA		| 0,6 A / 0,6 A
+220 VAC: 3 mA / 28 mA		| 0,06 A / 0,56 A
 
+11 Modules Non-Cycling / Cycling
+
+24VDC 0,33 A / 0,55 A  		| 0,6 A / 1 A
+24VAC 0 A / 1,66 A 		| 0 A / 3 A 
+220VAC 0 A / 200 mA 		| 0 A / 0,36 A
+5VDC max. 0,12 A, typical 0,05 A

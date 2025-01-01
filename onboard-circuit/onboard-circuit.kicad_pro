@@ -268,7 +268,7 @@
     "net_colors": null,
     "netclass_assignments": {
       "GND": "c",
-      "Net-(C-Pad1)": "f",
+      "Net-(C-Pad1)": "e",
       "Net-(C1-Pad1)": "e",
       "Net-(D-A)": "d",
       "Net-(GRAYCODE-LIGHT-A)": "d",
