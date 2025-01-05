@@ -94,7 +94,7 @@ void Driver::init_spi() {
     device_config.pre_cb = 0;
     device_config.post_cb = 0;
 
-    ret = spi_bus_initialize(HSPI_HOST, &bus_config, 1);
+    ret = spi_bus_initialize(HSPI_HOST, &bus_config, SPI_DMA_DISABLED);
     ESP_ERROR_CHECK(ret);
     ret = spi_bus_add_device(HSPI_HOST, &device_config, &spi);
     ESP_ERROR_CHECK(ret);
