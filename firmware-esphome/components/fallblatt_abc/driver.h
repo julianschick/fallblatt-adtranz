@@ -52,7 +52,7 @@ private:
     void spin_on() { gpio_set_level(pins.spin_enable, 1); spinning = true; }
     void spin_off() { gpio_set_level(pins.spin_enable, 0); spinning = false; }
 
-    void clear_registers();
+    //void clear_registers();
     void push_out();
 
 };
