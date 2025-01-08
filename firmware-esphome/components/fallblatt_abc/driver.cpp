@@ -86,7 +86,7 @@ void Driver::init_spi() {
     device_config.duty_cycle_pos = 128; // 50%/50%
     device_config.cs_ena_pretrans = 0;
     device_config.cs_ena_posttrans = 0;
-    device_config.clock_speed_hz= 1000; // 1 KHz, no need to hurry
+    device_config.clock_speed_hz= 10000; // 10 KHz, no need to hurry
     device_config.input_delay_ns = 0;
     device_config.spics_io_num = -1;
     device_config.flags = 0;

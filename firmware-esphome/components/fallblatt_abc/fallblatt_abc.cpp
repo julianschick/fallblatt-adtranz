@@ -2,6 +2,7 @@
 
 #include <nvs_flash.h>
 #include <nvs.h>
+#include <vector>
 
 #include "gray.h"
 
@@ -35,15 +36,21 @@ namespace esphome::fallblatt {
         state = value;
         
         std::string latinValue = GrayConverter::utf8ToLatin(value);
+        std::vector<int> positions;
+
+        for (int i = 0; i < latinValue.size(); i++) {
+            if (auto pos = GrayConverter::charToPosition(latinValue[i])) {
+                positions.push_back(*pos);
+            }
+        }
 
         int n = number_of_modules;
 
         for (int i = 0; i < n; i++) {
-            if (i < latinValue.size()) {
-                int pos = GrayConverter::charToPosition(latinValue[i]);
-                drv->set_position(n - i - 1, pos);
+            if (i < positions.size()) {
+                drv->set_position(n - i - 1, positions[i]);
             } else {
-                drv->set_position(n - i - 1, GrayConverter::charToPosition(' '));
+                drv->set_position(n - i - 1, *GrayConverter::charToPosition(' '));
             }
         }
 

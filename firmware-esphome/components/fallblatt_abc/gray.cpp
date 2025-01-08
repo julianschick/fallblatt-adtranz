@@ -1,6 +1,7 @@
 #include "gray.h"
 
 GrayConverter::GrayConverter() {
+#if USE_GRAY_TABLE
     tbl = new uint8_t[84] {
         0x7F, 0x3F, 0x1F, 0x5F, 0x4F, 0x0F, 0x2F, 0x6F, 0x67, 0x27, 
         0x07, 0x47, 0x57, 0x17, 0x37, 0x77, 0x73, 0x33, 0x13, 0x53,
@@ -12,21 +13,23 @@ GrayConverter::GrayConverter() {
         0x2C, 0x6C, 0x64, 0x24, 0x04, 0x44, 0x54, 0x14, 0x34, 0x74,
         0x70, 0x30, 0x10, 0x50
     };
+#endif
 }
 
 GrayConverter::~GrayConverter() {
+#if USE_GRAY_TABLE
     delete[] tbl;
+#endif
 }
 
-uint8_t GrayConverter::positionToGray2(int pos) {
+uint8_t GrayConverter::positionToGray(int pos) {
+#if USE_GRAY_TABLE
     if (pos < 0 || pos > 83) {
         return tbl[0];
     } else {
         return tbl[pos];
     }
-}
-
-uint8_t GrayConverter::positionToGray(int pos) {
+#else
     if (pos < 0 || pos > 83) {
         return 0x7F;
     } else {
@@ -37,9 +40,11 @@ uint8_t GrayConverter::positionToGray(int pos) {
         pos8 = (((pos8 >> 7) & 1) | ((pos8 >> 5) & 2) | ((pos8 >> 3) & 4) | ((pos8 >> 1) & 8) | ((pos8 << 1) & 0x10) | ((pos8 << 3) & 0x20) | ((pos8 << 5) & 0x40) | ((pos8 << 7) & 0x80)) >> 1;
         return pos8;
     }
+#endif
 }
 
-int GrayConverter::charToPosition(uint8_t c) {
+
+std::optional<int> GrayConverter::charToPosition(uint8_t c) {
 
     // A-Z
     if (c >= 65 && c <= 90) {
@@ -100,7 +105,7 @@ int GrayConverter::charToPosition(uint8_t c) {
     }
 
 
-    return 0;
+    return {};
 }
 
 std::string GrayConverter::utf8ToLatin(std::string s) {
