@@ -6460,7 +6460,7 @@
 				)
 			)
 		)
-		(property "Value" "5A 50V"
+		(property "Value" "3A 50V"
 			(at 92.71 26.7278 90)
 			(effects
 				(font
@@ -6728,7 +6728,7 @@
 				)
 			)
 		)
-		(property "Value" "2A 50V"
+		(property "Value" "1A 50V"
 			(at 97.79 44.5078 90)
 			(effects
 				(font
@@ -7882,7 +7882,7 @@
 				)
 			)
 		)
-		(property "Value" "1A 10V"
+		(property "Value" "0,25A 10V"
 			(at 88.9 44.45 90)
 			(effects
 				(font
@@ -7950,7 +7950,7 @@
 				)
 			)
 		)
-		(property "Value" "1A 300V"
+		(property "Value" "0,5A 300V"
 			(at 77.47 67.3678 90)
 			(effects
 				(font

@@ -18,3 +18,9 @@ No Operation | *20
 24VAC 0 A / 1,66 A 		| 0 A / 3 A 
 220VAC 0 A / 200 mA 		| 0 A / 0,36 A
 5VDC max. 0,12 A, typical 0,05 A
+
+30 Modules Non-Cycling / Cycling
+24VDC: 570 mA / 880 mA  ==> Fuse 1 A
+24VAC: 0 A / 2,4 A	==> Fuse 3 A
+220VAC 40 mA / 300 mA   ==> Fuse 0,5 A
+5VDC 40 - 120 mA	==> Fuse 0,25 A
