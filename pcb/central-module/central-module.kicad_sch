@@ -6468,7 +6468,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Fuse:Fuseholder_Littelfuse_445_030_series_5x20mm"
+		(property "Footprint" "JS_Local:Fuseholder_Schurter_OGN_22.5"
 			(at 92.71 30.988 90)
 			(effects
 				(font
@@ -6736,7 +6736,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Fuse:Fuseholder_Littelfuse_445_030_series_5x20mm"
+		(property "Footprint" "JS_Local:Fuseholder_Schurter_OGN_22.5"
 			(at 97.79 48.768 90)
 			(effects
 				(font
@@ -6939,7 +6939,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05504HBWC_1x04_P5.00mm_Horizontal"
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type175_RT02704HBLC_1x04_P7.50mm_Horizontal"
 			(at 59.69 34.29 0)
 			(effects
 				(font
@@ -7013,7 +7013,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05504HBWC_1x04_P5.00mm_Horizontal"
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type175_RT02704HBLC_1x04_P7.50mm_Horizontal"
 			(at 43.18 82.55 0)
 			(effects
 				(font
@@ -7382,7 +7382,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05503HBWC_1x03_P5.00mm_Horizontal"
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05503HBLC_1x03_P5.00mm_Horizontal"
 			(at 59.69 49.53 0)
 			(effects
 				(font
@@ -7890,7 +7890,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Fuse:Fuseholder_Littelfuse_445_030_series_5x20mm"
+		(property "Footprint" "JS_Local:Fuseholder_Schurter_OGN_22.5"
 			(at 88.9 51.308 90)
 			(effects
 				(font
@@ -7958,7 +7958,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Fuse:Fuseholder_Littelfuse_445_030_series_5x20mm"
+		(property "Footprint" "JS_Local:Fuseholder_Schurter_OGN_22.5"
 			(at 77.47 71.628 90)
 			(effects
 				(font
