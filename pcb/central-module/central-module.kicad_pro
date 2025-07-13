@@ -54,22 +54,6 @@
       "diff_pair_dimensions": [],
       "drc_exclusions": [
         [
-          "annular_width|122630000|147160000|737b5f17-acef-41d5-9ebe-8e7c58829d64|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "annular_width|122630000|99600000|2d1c9c32-7b7e-4b19-b982-bf536b1daccd|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "annular_width|146570000|147160000|6ad28a3f-2a46-4e2f-9368-146f296fab8a|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "annular_width|146570000|99600000|dd3214e3-db4b-42ec-91d0-d78dcf72b58e|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
           "extra_footprint|105000000|145000000|55a24ed4-4d62-4031-8475-5d2fe21d246b|00000000-0000-0000-0000-000000000000",
           ""
         ],
@@ -86,19 +70,7 @@
           ""
         ],
         [
-          "padstack|122630000|147160000|737b5f17-acef-41d5-9ebe-8e7c58829d64|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "padstack|122630000|99600000|2d1c9c32-7b7e-4b19-b982-bf536b1daccd|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "padstack|146570000|147160000|6ad28a3f-2a46-4e2f-9368-146f296fab8a|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "padstack|146570000|99600000|dd3214e3-db4b-42ec-91d0-d78dcf72b58e|00000000-0000-0000-0000-000000000000",
+          "footprint_filters_mismatch|192160000|114500000|468604c4-9798-4fb9-aba4-54f9cb4293a1|00000000-0000-0000-0000-000000000000",
           ""
         ]
       ],
@@ -119,9 +91,9 @@
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
         "footprint": "error",
-        "footprint_filters_mismatch": "ignore",
+        "footprint_filters_mismatch": "warning",
         "footprint_symbol_mismatch": "warning",
-        "footprint_type_mismatch": "ignore",
+        "footprint_type_mismatch": "warning",
         "hole_clearance": "error",
         "hole_near_hole": "error",
         "hole_to_hole": "error",
@@ -136,13 +108,13 @@
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
         "mirrored_text_on_front_layer": "warning",
-        "missing_courtyard": "ignore",
+        "missing_courtyard": "warning",
         "missing_footprint": "warning",
         "net_conflict": "warning",
         "nonmirrored_text_on_back_layer": "warning",
-        "npth_inside_courtyard": "ignore",
+        "npth_inside_courtyard": "warning",
         "padstack": "warning",
-        "pth_inside_courtyard": "ignore",
+        "pth_inside_courtyard": "warning",
         "shorting_items": "error",
         "silk_edge_clearance": "warning",
         "silk_over_copper": "warning",
@@ -462,9 +434,9 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
-      "footprint_filter": "ignore",
+      "footprint_filter": "warning",
       "footprint_link_issues": "warning",
-      "four_way_junction": "ignore",
+      "four_way_junction": "warning",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
       "label_dangling": "error",
@@ -481,14 +453,14 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
-      "simulation_model_issue": "ignore",
-      "single_global_label": "ignore",
+      "simulation_model_issue": "warning",
+      "single_global_label": "warning",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
       "unit_value_mismatch": "error",
@@ -606,7 +578,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "gerber/",
+      "plot": "gerber-v1.1/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
