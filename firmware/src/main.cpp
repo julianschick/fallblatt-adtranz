@@ -24,6 +24,7 @@ void main2() {
     pins.clr = GPIO_NUM_19;
     pins.rclk = GPIO_NUM_18;
     pins.spinEnable = GPIO_NUM_4;
+    pins.dcEnable = GPIO_NUM_3;
 
     Driver* drv = new Driver(&pins, 1);
 

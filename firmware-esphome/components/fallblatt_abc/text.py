@@ -11,7 +11,7 @@ FallblattABC = fallblatt_ns.class_(
     "FallblattABC", cg.Component, text.Text
 )
 
-CONFIG_SCHEMA = text.TEXT_SCHEMA.extend({
+CONFIG_SCHEMA = text.text_schema().extend({
     cv.Required(CONF_ID): cv.declare_id(FallblattABC),
     cv.Required(CONF_NUMBER_OF_MODULES):  cv.positive_int
 }).extend(cv.COMPONENT_SCHEMA)

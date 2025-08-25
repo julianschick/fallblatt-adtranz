@@ -4,7 +4,7 @@
 #include <esp_log.h>
 #include <esp_timer.h>
 
-#define ESP_IDF 4
+#define ESP_IDF 5
 #define LOG_TAG "ABC_drv"
 
 Driver::Driver(driver_pins_t* pins_, int device_count_) : 
@@ -118,6 +118,7 @@ void Driver::init_gpio() {
 
     // no spinning
     spin_off();
+    power_off();
     
     // enable register output
     gpio_set_level(pins.oe, 0);

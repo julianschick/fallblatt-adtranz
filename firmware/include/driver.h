@@ -13,6 +13,7 @@ typedef struct {
     gpio_num_t oe;
     //
     gpio_num_t spinEnable;
+    gpio_num_t dcEnable;
 }  driver_pins_t;
 
 

@@ -22,8 +22,6 @@ void Driver::set_position(int module_index, uint8_t pos) {
         positions[module_index] = pos;
         
         push_out();
-        
-        //gpio_set_level(pins.spinEnable, 1);
     }
 }
 
@@ -51,11 +49,13 @@ void Driver::demo() {
 }
 
 void Driver::en() {
+    gpio_set_level(pins.dcEnable, 1);
     gpio_set_level(pins.spinEnable, 1);
 }
 
 void Driver::dis() {
     gpio_set_level(pins.spinEnable, 0);
+    gpio_set_level(pins.dcEnable, 0);
 }
 
 void Driver::init_spi() {
@@ -101,6 +101,7 @@ void Driver::init_gpio() {
     mask |= (uint64_t) 0x01 << (uint64_t) pins.rclk;
     mask |= (uint64_t) 0x01 << (uint64_t) pins.oe;
     mask |= (uint64_t) 0x01 << (uint64_t) pins.spinEnable;
+    mask |= (uint64_t) 0x01 << (uint64_t) pins.dcEnable;
 
     gpio_config_t io_conf;
     io_conf.intr_type = GPIO_INTR_DISABLE;
@@ -111,6 +112,7 @@ void Driver::init_gpio() {
     ESP_ERROR_CHECK(gpio_config(&io_conf));
 
     // no spinning
+    gpio_set_level(pins.dcEnable, 0);
     gpio_set_level(pins.spinEnable, 0);
 
     // enable register output
