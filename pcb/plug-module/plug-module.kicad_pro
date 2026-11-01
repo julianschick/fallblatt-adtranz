@@ -696,13 +696,17 @@
         "uuid": "7d33117e-4f7b-4167-8883-44198fec4073"
       }
     ],
-    "used_designators": "",
+    "used_designators": "R14-20,SW1,C7,#PWR8-11,U4-5",
     "variants": []
   },
   "sheets": [
     [
       "7d33117e-4f7b-4167-8883-44198fec4073",
       "plug-module"
+    ],
+    [
+      "7f68c98c-9259-4939-bfa3-c8eb67dda965",
+      "comparison signal processing"
     ]
   ],
   "text_variables": {},
