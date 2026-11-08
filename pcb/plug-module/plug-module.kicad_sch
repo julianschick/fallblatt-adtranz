@@ -9212,7 +9212,7 @@
 		(fields_autoplaced yes)
 		(uuid "57495340-cffc-4c6d-b319-0b279be7554d")
 		(property "Reference" "C4"
-			(at 240.03 14.0165 90)
+			(at 240.03 12.7 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9221,8 +9221,8 @@
 				)
 			)
 		)
-		(property "Value" "2u2"
-			(at 240.03 16.4408 90)
+		(property "Value" "100n"
+			(at 240.03 15.24 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9231,7 +9231,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3"
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
 			(at 243.84 19.3548 0)
 			(hide yes)
 			(show_name no)
@@ -10931,7 +10931,7 @@
 		(fields_autoplaced yes)
 		(uuid "d2f2ff98-2722-4470-8899-c561825ad92c")
 		(property "Reference" "R3"
-			(at 222.25 15.1595 90)
+			(at 222.25 13.97 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10940,8 +10940,8 @@
 				)
 			)
 		)
-		(property "Value" "10"
-			(at 222.25 17.5838 90)
+		(property "Value" "100"
+			(at 222.25 16.51 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
